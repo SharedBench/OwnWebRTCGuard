@@ -2,6 +2,11 @@
 
 一个无第三方依赖的 Chrome Manifest V3 扩展，通过官方 Chrome privacy.network.webRTCIPHandlingPolicy 接口限制 WebRTC 的 IP/网络路径处理。
 
+## 研究笔记 / Research notes
+
+- [WebRTC 泄露原理、四项目比较与待验证项（中文）](docs/notes/webrtc-ip-privacy-comparison_cn.md)
+- [WebRTC IP privacy mechanisms and extension comparison (English)](docs/notes/webrtc-ip-privacy-comparison.md)
+
 ## 安装（macOS / Windows / Linux）
 
 1. 从本仓库的 Code → Download ZIP 下载源码并解压，也可以直接 git clone。
