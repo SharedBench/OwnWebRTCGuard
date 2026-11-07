@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Own WebRTC Guard</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="panel">
+    <header>
+      <div class="mark" aria-hidden="true">◆</div>
+      <div>
+        <h1>WebRTC Guard</h1>
+        <p class="subtitle">本地运行 · 无第三方服务</p>
+      </div>
+    </header>
+
+    <section class="status" aria-live="polite">
+      <div class="status-label">当前浏览器策略</div>
+      <div id="status" class="status-value">正在读取…</div>
+      <div id="effective" class="detail"></div>
+    </section>
+
+    <div class="actions" aria-label="WebRTC IP 处理模式">
+      <button type="button" data-mode="disable_non_proxied_udp">
+        <span class="action-name">严格保护</span>
+        <span class="action-desc">限制不经代理的 UDP（推荐代理/VPN 用户）</span>
+      </button>
+      <button type="button" data-mode="default_public_interface_only">
+        <span class="action-name">兼容模式</span>
+        <span class="action-desc">限制私有 IP，通常保留更多实时通信能力</span>
+      </button>
+      <button type="button" data-mode="restore">
+        <span class="action-name">取消本扩展的设置</span>
+        <span class="action-desc">交还控制权，不覆盖其他扩展或管理策略</span>
+      </button>
+    </div>
+
+    <p id="message" class="message" role="status" aria-live="polite"></p>
+    <footer>
+      <p>仅使用 Chrome 官方 <code>privacy</code> 权限。</p>
+      <p>不读取网页、不收集数据、不发起网络请求。</p>
+      <p>这不是全局 VPN，也不是彻底禁用 WebRTC。</p>
+    </footer>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

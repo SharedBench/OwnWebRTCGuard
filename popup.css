@@ -1,0 +1,32 @@
+:root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", system-ui, sans-serif; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 334px; background: #f5f6f8; color: #171b24; }
+.panel { padding: 17px; }
+header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.mark { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 12px; background: #e4edff; color: #225cce; font-size: 24px; font-weight: 900; }
+h1 { font-size: 17px; letter-spacing: -.35px; margin: 0 0 2px; }
+p { margin: 0; }
+.subtitle { color: #758091; font-size: 11px; }
+.status { background: #fff; border: 1px solid #e7eaf0; border-radius: 12px; padding: 12px 14px; margin-bottom: 13px; }
+.status-label { color: #737d8f; font-size: 11px; margin-bottom: 5px; }
+.status-value { font-size: 14px; font-weight: 650; }
+.detail { font-size: 10px; color: #7b8593; margin-top: 4px; overflow-wrap: anywhere; }
+.actions { display: grid; gap: 8px; }
+button { font: inherit; cursor: pointer; text-align: left; border: 1px solid #e5e8ef; background: #fff; padding: 11px 12px; border-radius: 11px; transition: border-color .15s, background-color .15s; }
+button:hover:not(:disabled) { border-color: #6a9bfa; }
+button.active { border-color: #477fea; background: #eaf2ff; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+.action-name { display: block; font-size: 12px; font-weight: 650; }
+.action-desc { display: block; font-size: 10px; color: #768091; margin-top: 3px; line-height: 1.5; }
+.message { min-height: 16px; color: #a12a31; font-size: 11px; line-height: 1.45; margin: 10px 2px 0; }
+footer { padding: 11px 2px 0; margin-top: 1px; border-top: 1px solid #e2e5ea; color: #7c8491; font-size: 10px; line-height: 1.65; }
+code { font-family: ui-monospace, Menlo, monospace; }
+@media (prefers-color-scheme: dark) {
+  body { background: #1e222b; color: #f1f3f8; }
+  .mark { background: #223554; color: #a1c2ff; }
+  .status, button { background: #2a303b; border-color: #3a4351; color: #f1f3f8; }
+  button.active { background: #203c69; border-color: #629cff; }
+  .subtitle, .status-label, .detail, .action-desc, footer { color: #9aa5b7; }
+  .message { color: #ffa5a7; }
+  footer { border-color: #394354; }
+}
